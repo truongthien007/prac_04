@@ -6,5 +6,6 @@ for i in range(0, quick_pick):
     while len(values) != 6:
         value = random.randint(1, 45)
         if value not in values:
-            values.append(str(value))
-    print(', '.join(values))
+            values.append(value)
+    values.sort()
+    print(', '.join([str(value) for value in values]))
